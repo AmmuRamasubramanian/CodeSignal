@@ -1,0 +1,15 @@
+inputString= "crazy"
+def alphabeticShift(inputString):
+    arr=[]
+    arr1=[i for i in inputString]
+    for j in range(len(inputString)):
+
+        val=ord(inputString[j])+1
+        if val>=97 and val<123:
+            arr.append(chr(val))
+        elif val==123:
+            val=97
+            arr.append(chr(val))
+    return "".join(arr)
+
+print(alphabeticShift(inputString))
