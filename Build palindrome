@@ -1,0 +1,11 @@
+st="abcdc"
+def buildPalindrome(s):
+    for i,c in enumerate(s):
+        if s==s[::-1]:
+            return s
+        elif i==0:
+            s+=s[0]
+        else:
+            s=s[:-i]+s[i]+s[-i:]
+
+print(buildPalindrome(st))
